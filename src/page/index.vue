@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <my-header></my-header>
     <div class="article_list">
       <ul>
         <li v-for="i in list" :key="i.create_at">
@@ -11,15 +11,15 @@
         </li>
       </ul>
     </div>
-    <Footer></Footer>
+  <my-footer></my-footer>
   </div>
 </template>
 <script>
-import Header from '@/components/header.vue'
-import Footer from '@/components/footer.vue'
+import myHeader from '@/components/header.vue'
+import myFooter from '@/components/footer.vue'
 export default {
   components:{
-    Header,Footer
+    myHeader,myFooter
   },
   data(){
     return {
