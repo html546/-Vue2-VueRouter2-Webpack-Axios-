@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import api from './api/index.js'
+import utils from './utils/index.js'
 
 
 Vue.prototype.$api = api
+Vue.prototype.$utils = utils
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
