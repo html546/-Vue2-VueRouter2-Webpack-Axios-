@@ -7,7 +7,7 @@
     <article v-html="dat.content"></article>
     <h3>网友回复:</h3>
     <ul>
-      <li v-for="i in dat.replies" :key="i.author">
+      <li v-for="i in dat.replies" :key="i.create_at">
         <p>评论者:{{i.author.loginname}} 评论于:{{$utils.goodTime(i.create_at)}}</p> 
         <article v-html="i.content"></article>
       </li>
@@ -33,8 +33,9 @@ export default {
   },
   methods:{
     getData(){
-      this.$api.get('topic'+this.id,null,r=>{
+      this.$api.get('topic/'+this.id,null,r=>{
         this.dat = r.data
+        console.log(r.data);
       })
     }
   }
