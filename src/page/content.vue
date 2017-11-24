@@ -2,6 +2,7 @@
   <div>
     <myHeader></myHeader>
     <h2 v-text="dat.title"></h2>
+    <img src="static/image/pork1.png" alt="">
     <p>作者:{{dat.author.loginname}} 发表于:{{$utils.goodTime(dat.create_at)}}</p>
     <hr>
     <article v-html="dat.content"></article>
